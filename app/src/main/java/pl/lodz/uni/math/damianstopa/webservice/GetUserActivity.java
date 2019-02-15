@@ -102,7 +102,7 @@ public class GetUserActivity extends AppCompatActivity {
         protected void onPostExecute(String dataFromGet) {
             super.onPostExecute(dataFromGet);
             try {
-                JSONObject jsonObject = new JSONObject(dataFromGet);  //tworzymy JSONa na podstawie naszych danych przekazanych w argumencie do tej funkcji
+                JSONObject jsonObject = new JSONObject(dataFromGet);
                 JSONObject dataObject = jsonObject.getJSONObject("data");
 
                 String firstName = dataObject.getString("first_name");

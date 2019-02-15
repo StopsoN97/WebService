@@ -17,6 +17,7 @@ import java.util.Map;
 
 import javax.net.ssl.HttpsURLConnection;
 
+
 public class AddUserActivity extends AppCompatActivity {
 
     private ProgressBar progressBar;
@@ -83,12 +84,16 @@ public class AddUserActivity extends AppCompatActivity {
         protected void onPostExecute(Integer responseCode) {
             if (responseCode == 201) {
                 Toast.makeText(AddUserActivity.this, "Success", Toast.LENGTH_SHORT).show();
-                editTextName.setText("");
-                editTextJob.setText("");
+                clearEditTexts();
             } else {
                 Toast.makeText(AddUserActivity.this, "Error " + responseCode, Toast.LENGTH_SHORT).show();
             }
             progressBar.setVisibility(View.INVISIBLE);
         }
+    }
+
+    private void clearEditTexts() {
+        editTextName.setText("");
+        editTextJob.setText("");
     }
 }
