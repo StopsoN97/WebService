@@ -41,5 +41,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button buttonUpdateUser = findViewById(R.id.buttonMenuUpdateUser);
+        buttonUpdateUser.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, UpdateUserActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 }
