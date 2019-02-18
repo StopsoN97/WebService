@@ -119,7 +119,7 @@ public class GetUserActivity extends AppCompatActivity {
     }
 
 
-    public void loadImagePreview(final String url) {
+    private void loadImagePreview(final String url) {
         //start a background thread for networking
         new Thread(new Runnable() {
             public void run() {

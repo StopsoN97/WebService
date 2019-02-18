@@ -80,8 +80,8 @@ public class UpdateUserActivity extends AppCompatActivity {
                 HttpsURLConnection httpsURLConnection = (HttpsURLConnection) restApiEndpoint.openConnection();
                 httpsURLConnection.setRequestMethod("PUT");
                 Map<String, String> data = new HashMap<>();
-                data.put("name", editTextJob.getText().toString());
-                data.put("job", editTextName.getText().toString());
+                data.put("name", editTextName.getText().toString());
+                data.put("job", editTextJob.getText().toString());
                 JSONObject postData = new JSONObject(data);
                 httpsURLConnection.setDoOutput(true);
                 httpsURLConnection.getOutputStream().write(postData.toString().getBytes());
